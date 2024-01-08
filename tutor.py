@@ -18,7 +18,7 @@ chatgpt_url = "https://api.openai.com/v1/chat/completions"
 
 chatgpt_headers = {
     "content-type": "application/json",
-    "Authorization":"Bearer {}".format(openai.api_key)}
+    "Authorization":"Bearer {}".format(openaikey)}
 
 def generate_mcq(paragraph,url,headers,prompt):
     
