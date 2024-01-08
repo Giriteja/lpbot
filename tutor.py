@@ -13,12 +13,12 @@ import pytesseract
 import cv2
 import numpy as np
 # Set your OpenAI API key
-openai.api_key = "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"
+openai.api_key = os.getenv("openaikey")
 chatgpt_url = "https://api.openai.com/v1/chat/completions"
 
 chatgpt_headers = {
     "content-type": "application/json",
-    "Authorization":"Bearer {}".format("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")}
+    "Authorization":"Bearer {}".format(openai.api_key)}
 
 def generate_mcq(paragraph,url,headers,prompt):
     
