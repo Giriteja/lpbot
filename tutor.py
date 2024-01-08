@@ -84,7 +84,7 @@ def feedback(questions,original_answers,student_answers,url,headers):
 	# Define the payload for the chat model
     for id,data in enumerate(questions):
             messages = [
-		{"role": "system", "content": """You are an expert in evaluating student responses for questions and gives them the feeedback on mistakes.I Will provide questions and original answers along with student responses
+		{"role": "system", "content": """You are an expert in evaluating student responses for questions and gives them the feeedback on mistakes.I Will provide questions and original answers along with student responses.compare original_answers and student_answers and mention if they are correct or wrong and give explanation on the topic
 		""",
 		"role": "user", "content": f"{questions[id]},{original_answers[id]},{student_answers[id]}"}
 	    ]
